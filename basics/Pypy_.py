@@ -37,3 +37,29 @@
 # p =  2 * pi_ * radius
 # s = pi_ * radius ** 2
 # print(p, s)
+
+# first, second, third = 1, 2, 3
+# first = second; third = first; second = third
+
+
+# first = 1
+# second = 2
+# third = 3
+
+# first, second, third = second, third, first
+# print(first, second, third)
+
+# num1 = 4
+# num2 = 2
+# num3 = 3.0
+# x = num1 % num2
+# y = x * num3
+# print(x, y)
+
+# print('string4'.startswith('str'))   # True
+
+name = input('Your name: ')
+hello = 'Hello, {}!'.format(name)
+print(hello, 'How are you?')
+# Your name: Omurbek
+# Hello, Omurbek! How are you?
