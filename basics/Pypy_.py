@@ -63,3 +63,21 @@ hello = 'Hello, {}!'.format(name)
 print(hello, 'How are you?')
 # Your name: Omurbek
 # Hello, Omurbek! How are you?
+
+
+# s = 'cow loves good milk'
+# y = s.replace('o', 'e', 2)
+# print(y)
+
+# string1 = "America" 
+# string2 = "Japan"
+# print(string1[0] + string2[0] + string1[int(int(len(string1))//2)] + string2[int(int(len(string2))//2)] + string1[-1] + string2[-1])
+
+
+# string = 'helooooo'
+# print(string.replace(string[int(5-int(len(string))):int(6-int(len(string)))], 'K', 1))
+# print(string[:5] + 'K' + string[6:])
+
+title = 'Пирог'
+price = 35
+print('Название:', title, ',', 'цена:', price)
