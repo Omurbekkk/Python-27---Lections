@@ -154,6 +154,12 @@ b = 6
 # res = 'Hello' if num == 5 else 'Bye'
 # print(res)
 
+# if num == 5:
+#     res = 'Hello'
+# else:
+#     res = 'Bye'
+# print(res)
+
 # Когда нужно быстро что то чекнуть и тд
 
 "=======================FizzBuzz==================="
