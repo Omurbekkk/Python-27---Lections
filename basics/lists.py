@@ -98,10 +98,18 @@ print(list5)   # ['hello', 1, 2, 3, 4]
 #                   list6 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 #                   list6 = list(range(1,11))
 #                   print(list6[::-1])
-#                   list1.reverse()
-#                   print(list.reverse(list6))                       !!!!!!
+#                   list6.reverse()
+#                   print(list(reversed(list6)) 
+#                   slicedString=str[::-1]
+#                   print (slicedString)
 
 # print(dir(list))
+
+
+# clear - чистит список
+list1 = [1,2,3,4]
+list1.clear()
+print(list1) # []
 
 # Метод count
 
@@ -127,13 +135,47 @@ print(list6)
 
 #  ПОЛУЧИЛОСЬ
 
+# index - возвращает индекс данного элемента
+list2 = ['hello', 'world', 'makers']
+ind = list2.index('hello')
+print(ind) # 0
+list2.index('makers') # 2
 
-# copy   -   возвращает копию списка
+# sort - метод, который сортирует по возрастанию
+# если передать .sort(reverse=True), то сортирует по убыванию
+list3 = [34,12,67,12,89,45]
+list3.sort()
+print(list3) # [12, 12, 34, 45, 67, 89]
+list3.sort(reverse=True)
+print(list3) # [89, 67, 45, 34, 12, 12]
+# list3.sort()
+# list3.reverse()
 
-# extend - ...
+list4 = ['a', 'c', 'b', 'B', 'A']
+list4.sort()
+print(list4) # ['A', 'B', 'a', 'b', 'c']
+
+list5 = [10, 'b', 3, 'c', 5]
+# list5.sort() 
+# TypeError: '<' not supported between instances of 'str' and 'int'
+
+# copy - возвращает копию списка
+list1 = [1,2,3]
+list2 = list1.copy()
+list2.append(4)
+print(list1)
+print(list2)
+
+# extend - расширяет список другим списком
+list1 = [1,2,3,4]
+list2 = [5,6,7,8]
+# list1.append(list2)
+# list1  [1,2,3,4, [5,6,7,8]]
+
+list1.extend(list2)
+# list1  [1,2,3,4,5,6,7,8]
 
 
-#   SORT    REVERS     из ГИТА   и COPY   и   EXTEND                         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 
