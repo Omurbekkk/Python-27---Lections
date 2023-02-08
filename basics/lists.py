@@ -10,13 +10,14 @@ list1[3]  # [1, 2, 3]
 
 list1[3][-1] # 3               !!!!!!!!!
 
-list1 [-1] # False
+list1 [-1] # True
 
 list2 = list('hello')
 print(list2)    # ['h', 'e', 'l', 'l', 'o']
 
 # Функция list() преращает в список из отдельных каждых элементов этого аргумента. 
 # Только то что можно разделить по элементам
+
 
 # print(list(range(3,10,2))) # [3, 5, 7, 9]
 print(list(range(3,10,1))) # [3, 4, 5, 6, 7, 8, 9]
@@ -95,11 +96,13 @@ print(list5)   # ['hello', 1, 2, 3, 4]
 # print(list6)              
 
 
-#                   list6 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-#                   list6 = list(range(1,11))
-#                   print(list6[::-1])
-#                   list6.reverse()
-#                   print(list(reversed(list6)) 
+# list6 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# #                   list6 = list(range(1,11))
+# #                   print(list6[::-1])
+# # list6.reverse()                          Метод сначала нужно записать потом принтить
+# # print(list6)            
+#                                          #  Некторые функции не работают сами
+# print(list(reversed(list6)))                 А функцию можно сразу в принт
 #                   slicedString=str[::-1]
 #                   print (slicedString)
 
@@ -116,24 +119,10 @@ print(list1) # []
 # list1 = [1, 2, 3, 4, 5, 6, 1, 2 ,3]
 # list1.count(1)   # 2
 
-# list2 = ['hello', 'hello']
-# list1.count('hello')   # 3
-# list1.count('l')   # 0
-
-
-list6 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-list6.insert(0, list6.pop())
-list6.insert(1, list6.pop())
-list6.insert(2, list6.pop())
-list6.insert(3, list6.pop())
-list6.insert(4, list6.pop())
-list6.insert(5, list6.pop())
-list6.insert(6, list6.pop())
-list6.insert(7, list6.pop())
-list6.insert(8, list6.pop())
-print(list6)  
-
-#  ПОЛУЧИЛОСЬ
+# list22 = ['hello', 'hello']
+# print(list22.count('hello'))   # 2        Метод можно в принте если это цифра и в др подобных случаях КПЦ!    
+# list22.count('l')   # 0
+ 
 
 # index - возвращает индекс данного элемента
 list2 = ['hello', 'world', 'makers']
@@ -163,8 +152,8 @@ list5 = [10, 'b', 3, 'c', 5]
 list1 = [1,2,3]
 list2 = list1.copy()
 list2.append(4)
-print(list1)
-print(list2)
+print(list1)   # [1, 2, 3]
+print(list2)   # [1, 2, 3, 4]
 
 # extend - расширяет список другим списком
 list1 = [1,2,3,4]

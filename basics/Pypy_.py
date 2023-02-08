@@ -134,7 +134,17 @@
 # if 1 <= x2 <= 8 and 1 <= y2 <= 8 and x2 == y2 and x1 != x2 and y1 != y2: 
 #     print('YES')
 # else:
-#     print('NO')g
+#     print('NO')
+
+# ХОД СЛОНА
+# x1 = int(input())
+# y1 = int(input())
+# x2 = int(input())
+# y2 = int(input())
+# if abs(x1-x2) == abs(y1-y2): 
+#     print('YES')
+# else:
+#     print('NO')
 
 # print(chr(69))
 
@@ -158,3 +168,29 @@
 # else:
 #     print("impossible")
 
+# name_of_list = ['Helloworld!']
+# xxx = name_of_list[0]
+
+# if len(xxx) % 2 == 0:
+#     yyy = xxx[-int(len(xxx)/2):] + xxx[:int(len(xxx)/2)]
+# else:
+#     yyy = xxx[-int(len(xxx)//2):] + xxx[:int(len(xxx)//2 + 1)]
+
+# new_list = list(yyy)
+# print(new_list)
+
+# suitcase = []
+# suitcase.append('футболка')
+# suitcase.append('шорты')
+# suitcase.append('сланцы')
+# suitcase.append('очки')
+# suitcase.append('кепка')
+# print(suitcase)
+# suitcase.pop()
+# print(suitcase)
+# suitcase.insert(0, 'панама')
+# print(suitcase)
+
+# xxx = ['кам', 'нож', 'бум']
+# import random
+# print(random.choice(xxx))
