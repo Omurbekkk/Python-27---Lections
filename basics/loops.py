@@ -72,3 +72,5 @@ while 1 in list11:
     list11.remove(1)
 print(list11)
 
+
+
