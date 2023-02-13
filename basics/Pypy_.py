@@ -168,16 +168,16 @@
 # else:
 #     print("impossible")
 
-name_of_list = ['Helloworld!']
-xxx = name_of_list[0]
+# name_of_list = ['Helloworld!']
+# xxx = name_of_list[0]
 
-if len(xxx) % 2 == 0:
-    yyy = xxx[-int(len(xxx)/2):] + xxx[:int(len(xxx)/2)]
-else:
-    yyy = xxx[-int(len(xxx)//2):] + xxx[:int(len(xxx)//2 + 1)]
+# if len(xxx) % 2 == 0:
+#     yyy = xxx[-int(len(xxx)/2):] + xxx[:int(len(xxx)/2)]
+# else:
+#     yyy = xxx[-int(len(xxx)//2):] + xxx[:int(len(xxx)//2 + 1)]
 
-new_list = list(yyy)
-print(new_list)
+# new_list = list(yyy)
+# print(new_list)
 
 # suitcase = []
 # suitcase.append('футболка')

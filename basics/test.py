@@ -1,30 +1,33 @@
-list_ = [1, 'abcd', 3, '1', 4, 'xyz', 5, 'pqr', 7, 5, 12]
-ccc = []
-for o in list_:
-    if type(o) == int:
-      ccc.append(str(o))
-uuu = []
-kkk = len(ccc)
-for m in range(kkk):
-    uuu.append(int(ccc[m]))
-print(uuu)
-res = []
-for x in uuu:
-    if type(x) == int:
-      res.append(x)
-yyy = len(res)
-zzz = 0
-for i in range(yyy):
-    zzz = zzz + res[i]
-print(zzz)
+# 1
+
+# a = {'x': 1, 'y': 2, 'z': 1}
+# for i in a:
+#     print(i)
+#     break
 
 
-# myList = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-# print("The given list is:")
-# print(myList)
-# list_length=len(myList)
-# sumOfElements=0
-# for i in range(list_length):
-#     sumOfElements=sumOfElements+myList[i]
+# Задание 10 и 22
 
-# print("Sum of all the elements in the list is:", sumOfElements)
+# dict_ = {'a': None, 'b': 1, 'c': 2, 'd': None, 'e': 3}
+# b = {}
+# for x, y in  dict_.items():
+#     if y == None:
+#         b[x] = y
+# print(b)
+
+# dict_ = {'a': None, 'b': 1, 'c': 2, 'd': None, 'e': 3}
+# for x, y in  list(dict_.items()):
+#     if y != None:
+#         dict_.pop(x)
+# print(dict_)
+
+#                 Амина
+
+# # Проблема связана с тем, что вы пытаетесь модифицировать словарь, по элементам которого итерируетесь.
+# В условиях вашего кода это не проблема. Но вы должны сначала прежде чем начнётся цикл с удалениями) взять список пар элементов из вашего словаря.
+# products.items() возвращает не список, а итератор по элементам словаря. Само собой этот итератор ломается как только вы удаляете из словаря первый элемент.
+# Но если этот итератор до первого удаления полностью превратить в список, то удалять потом можно что хотите.
+
+# Или так:
+
+# new_products_dict = {k: v for k, v in products.items() if v['g_1'] != 0}
