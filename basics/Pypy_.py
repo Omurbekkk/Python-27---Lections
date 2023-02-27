@@ -194,3 +194,29 @@
 # xxx = ['кам', 'нож', 'бум']
 # import random
 # print(random.choice(xxx))
+
+
+# x = [1,'k',2,3]
+# for i in x:
+#     try:
+#         int(i)
+#         print(i)
+#     except:
+#         print('helol')
+#     else:
+#         print('jjj')
+
+
+
+'======>   СПРОСИТЬ!!!'
+
+def to_fahrenheit(k:int) -> float:
+    assert k>=0,'Холоднее абсолютного нуля!'
+    res=(k-273.15)*9/5+32
+    return res 
+
+print(to_fahrenheit(3))
+
+
+
+" ТЕ СКРИНЫ"

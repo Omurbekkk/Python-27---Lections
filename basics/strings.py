@@ -124,7 +124,7 @@ print('HELLO'.lower()) # hello
 'hello world'.find('wor') # 6    Выдает индекс первой буквы
 'hello world'.find('o') # 4
 'hello world'.rfind('o') # 7
-        
+
 
 
 

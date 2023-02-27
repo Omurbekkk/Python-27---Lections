@@ -1,6 +1,6 @@
 "==========================Compehentions========================="
 
-# генератор
+# генератор, с помощью которого можно создавать последовательность используя цикл for
 
 list1 = [i for i in range(1, 11)]
 # print(list1) [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -145,8 +145,11 @@ print(res5)
 
 # set comprehension
 
-set_comp = {x for x in range(10)}
-print(set_comp)
+set_comprehension = {x for x in range(10)}
+print({1, True, 'hello', 10, 1})
+# {1, 'hello', 10}
+# 1 == True
+# 0 == False
 
 
 

@@ -131,7 +131,7 @@
 #   print(f'max_list {x}')
 #   print(f'min_list {y}')
 
-# 23
+# 23 !!!!!!!!
 # list_ = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n']
 # step = 3
 # new_list = []
@@ -237,7 +237,7 @@
 #     list_.append(i[::-1])
 # print(sorted(list_, key = len))
 
-# 32
+# 32 !!!!!!
 
 # list_ = [1,2,3,4,5,6,7,8,9,0]
 # step = 2
@@ -304,6 +304,61 @@
 
 '==================================================DICTIONARY========================================================'
 
+# 28
+
+# dict1 = {'a': {'d': 1, 'e': 4}, 'b': {'f': 2, 'j': 4}, 'c': {'h': 3, 'i': 9}}
+# dict2 = {}
+
+# for key, value in dict1.items():
+#     m = 1
+#     for x, y in value.items():
+#         m *= y
+#         dict2[key] = m
+# print(dict2)
+
+# 30
+
+#   Функция Сортид
+
+# dict_ = {1: 2, 3: 4, 4: 3, 2: 1, 0: 0}
+# sorted_dict = {}
+# x = sorted(dict_, key=dict_.get)
+# print(x)
+
+#     Решение
+# dict_ = {1: 2, 3: 4, 4: 3, 2: 1, 0: 0}
+# sorted_dict = {}
+# x = sorted(dict_, key=dict_.get)
+# print(x)
+# for k, v in dict_.items():
+#     for i in x:
+#         sorted_dict[i] = dict_[i]
+# print(sorted_dict)
+
+# 32
+# dict_ = {1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60}
+# key = int(input())
+# x = []
+# for k in dict_:
+#     x.append(k)
+# if key in x:
+#     print("Key is present in the dictionary")
+# else:
+#     print("Key is not present in the dictionary")
+
+
+#35
+
+# dict_ = {'math': {'sum': sum}, 'vars': {'a': 5,'b': 20,'c': 50}}
+# x = dict_['math']
+# s = x['sum']
+# y = dict_['vars']
+# z = []
+# for v in y.values():
+#     z.append(v)
+# a = s(z)
+# print(a)
+
 # 36
 # a = {'a': 10, 'b': 9, 'c': 3}
 # result = 1
@@ -311,6 +366,70 @@
 #     result *= y
 # print(result)
 
+# 37
+# string = "pythonist"
+# a = []
+# b = []
+# for i in string:
+#     a.append(i)
+#     b.append(string.count(i))
+# dict_ = dict(zip(a, b))
+# print(dict_)
 
 
+
+'==================================================МНОЖЕСТВА========================================================'
+
+
+# 13
+# robert = {5, 7, 11, 10, 28} 
+# kail = {1, 5, 14, 8, 22} 
+# merri = {19, 20, 3, 11, 10}
+# x = robert.intersection(kail)
+# y = robert.intersection(merri)
+# if x and y:
+#     print('kail merri')
+# elif x:
+#     print('kail')
+# elif y:
+#     print('merri')
+# else:
+#     print('no one')
+
+# 16
+
+# a = [set(), set(), set()]
+# inp1 = input()
+# inp2 = int(input())
+# for i in range(1,len(a)+1):
+#     if inp2 == i:
+#         a[i-1].add(inp1)
+#     else:
+#         a[i-1].add('default value')
+# print(a)
+
+
+'================Try - Except========================='
+
+# 22
+
+# inp1 = input()
+# x = inp1.split()
+# list_ = []
+# for i in x:
+#     try:
+#         int(i)
+#     except ValueError:
+#         raise ValueError('Данный элемент не является числом!')
+#     else:
+#         list_.append(int(i))
+
+# Решение 2
+
+# inp1 = input()
+# x = inp1.split()
+# try:
+#     list_ = [int(i) for i in x]
+# except:
+#     raise ValueError('Данный элемент не является числом!')
 
