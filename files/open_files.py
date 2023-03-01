@@ -2,7 +2,11 @@
 
 # module - любой файл с расширением   .py
 
-'1. Вставить 2 примера'
+# import test
+# print(test.a)
+
+# from test import a
+# print(a)
 
 # package - набор модулей (в папке обязательно должен быть __init__.py)
 
@@ -10,7 +14,7 @@
 # hello()
 # from package.test2 import list_
 
-'2. Разобрать всё'
+'1. Разобрать всё'
 
 
 

@@ -208,15 +208,31 @@
 
 
 
-'======>   СПРОСИТЬ!!!'
+# '======>   СПРОСИТЬ!!!'
 
-def to_fahrenheit(k:int) -> float:
-    assert k>=0,'Холоднее абсолютного нуля!'
-    res=(k-273.15)*9/5+32
-    return res 
+# def to_fahrenheit(k:int) -> float:
+#     assert k>=0,'Холоднее абсолютного нуля!'
+#     res=(k-273.15)*9/5+32
+#     return res 
 
-print(to_fahrenheit(3))
+# print(to_fahrenheit(3))
 
 
 
-" ТЕ СКРИНЫ"
+# " ТЕ СКРИНЫ"
+
+def count_symbols(string:str):
+    v = 'фаеиоуыэюя'
+    c = 'йцкнгшщзхфвпрлджчсмтб'
+    v1 = 0
+    c1 = 0
+    s = 0
+    for l in string.lower():
+        if l in v:
+            v1 += 1
+        elif l in c:
+            c1 += 1
+        else:
+            s += 1
+    return f'Количество гласных: {v1}, согласных: {c1}, остальных символов: {s}'
+print(count_symbols('Мурат супер!'))
