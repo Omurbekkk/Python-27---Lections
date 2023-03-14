@@ -107,23 +107,23 @@ print(C.mro())
 
 
 
-# перекрестное наследование
-class A:
-    pass
+# # перекрестное наследование
+# class A:
+#     pass
 
-class B:
-    pass
+# class B:
+#     pass
 
-class C(A, B):
-    pass
+# class C(A, B):
+#     pass
 
-class D(B, A):
-    pass
+# class D(B, A):
+#     pass
 
-class E(C, D):
-    pass
-# TypeError: Cannot create a consistent method resolution
-# order (MRO) for bases A, B
+# class E(C, D):
+#     pass
+# # TypeError: Cannot create a consistent method resolution
+# # order (MRO) for bases A, B
 
 
 
