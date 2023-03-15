@@ -1,8 +1,8 @@
 # class Song:
-#     def __init__(self, title, author, year): 
-#         self.title = title
-#         self.author = author
-#         self.year = year
+    # def __init__(self, title, author, year): 
+    #     self.title = title
+    #     self.author = author
+    #     self.year = year
 #     def show_title(self):
 #         return f'Название этой песни {self.title}'
 
@@ -207,5 +207,51 @@ class spam:
 obj = spam(5)
 print(obj.val)           # 1
 '''
+
+
+
+
+# 2
+# class A:
+#     def method1(self):
+#        print('Основной функционал')
+
+# class B(A):
+#     def method1(self):
+#         super().method1()
+#         print('Дополнительный функционал')
+
+# obj = B()
+# obj.method1()
+
+
+# class MyString(str):
+#     def __init__(self, word):
+#         self.word = word
+    
+#     def append(self, new_word):
+#         self.word += new_word
+#         return self.word
+
+#     def __str__(self):
+#         return self.word
+
+#     def pop(self):
+#         pop = self.word[-1]
+#         self.word = self.word[:-1]
+#         return pop
+    
+#     def __str__(self):
+#         return self.word
+
+# example = MyString('String') 
+# example.append('hello')
+# print(example)
+
+# print(example.pop()) 
+# print(example)
+
+
+
 
 
