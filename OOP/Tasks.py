@@ -252,6 +252,55 @@ print(obj.val)           # 1
 # print(example)
 
 
+# Задание 8
 
+# class CustomError(Exception):
+#     def init(self, word):
+#         self.word = word
+#         # super().__init(word)
+#     pass
+# def check_letters(string):
+#     if string.isupper():
+#         return f'ВСЕ ОТЛИЧНО! {string}'
+#     else:
+#         raise capitals_error
+
+# capitals_error = CustomError('ТОЛЬКО БОЛЬШИЕ БУКВЫ РАЗРЕШЕНЫ В ЭТОМ КОДЕ')
+# print(check_letters("HELLO"))
+
+
+
+# class CustomError(Exception): 
+#    def init(self, message): 
+#       self.message = message 
+# capitals_error = CustomError('ТОЛЬКО БОЛЬШИЕ БУКВЫ РАЗРЕШЕНЫ В ЭТОМ КОДЕ')
+
+# def check_letters(message1): 
+#    if message1 == message1.upper(): 
+#       return f'ВСЕ ОТЛИЧНО! {message1}' 
+#    else: 
+#       raise capitals_error 
+   
+# print(check_letters("HELLO"))
+
+
+
+
+
+
+# Files N1
+
+# with open('task1.txt', 'r') as file:
+#     x = file.readlines()
+
+# for i in x:
+#     if int(i.rstrip()) < 6:
+#         print(i)
+
+
+# file = open('task1.txt') 
+# for i in file.readlines(9): 
+#     print(i) 
+# file.close()
 
 
