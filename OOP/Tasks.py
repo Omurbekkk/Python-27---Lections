@@ -304,3 +304,220 @@ print(obj.val)           # 1
 # file.close()
 
 
+
+
+
+# class User:
+#     def __init__(self, name, lastname, email):
+#         self.name = name
+#         self.lastname = lastname
+#         self.email = email
+
+#     @staticmethod
+#     def validate_email(x):
+#         return '@' in x
+    
+#     @classmethod
+#     def create_user(cls, string):
+#         list1 = string.split(',')
+#         name = list1[0]
+#         lastname = list1[1]
+#         email = list1[2]
+#         return cls(name, lastname, email)
+
+#     def __str__(self):
+#         if self.validate_email(self.email):
+#             return f'{self.name}:{self.email}'
+#         else:
+#             return "email в неправильном формате"
+
+# user1 = User.create_user('John, Snow, john@email.com')
+# user2 = User.create_user('Maks, Sun, Maksemail.com')
+# print(user1) 
+# print(user2) 
+
+
+
+# class User:
+
+#     def create_user(self, string):
+#         list1 = string.split(',')
+#         self.name = list1[0]; self.lastname = list1[1]; self.email = list1[2]
+
+#     def __str__(self):
+#         if '@' in self.email:
+#             return f'{self.name}:{self.email}'
+#         else: return "email в неправильном формате"
+    
+# user1 = User(); user1.create_user('John, Snow, john@email.com'); print(user1)
+# user2 = User(); user2.create_user('Maks, Sun, Maksemail.com'); print(user2)
+
+
+
+# class Product:
+#     base_price = 20000
+
+#     def __init__(self, model, year, color):
+#         self.model = model
+#         self.year = year
+#         self.color = color
+    
+#     def has_garantiya(self, year):
+#         if year <= self.year + 2:
+#             return 'Гарантия действительна'
+#         else: return 'Ваша гарантия истекла'
+
+#     @classmethod
+#     def change_price(cls, rate):
+#         cls.base_price += cls.base_price * rate//100
+#         return cls.base_price
+    
+# obj = Product('A218', 2008, 'red') 
+# obj.change_price(2)
+# print(obj.has_garantiya(2010))
+# print(obj.base_price)
+
+# class MyDict(dict):
+
+#     def __init__(self, d):
+#         self.d = d
+
+#     def get(self, key):
+#         for k,v in self.d.items():
+#             if key == k:
+#                 return v
+#             else:
+#                 return 'Are you kidding?'
+
+# obj_dict = MyDict({'1': 1, '2':2, '3':3}) 
+# print(obj_dict.get('1'))
+
+
+# class MoneyFmt:
+#     def __init__(self, amount):
+#         self.amount = amount
+    
+#     @staticmethod
+#     def dollarize(float_num):
+#         if float_num >= 0:
+#             return f"${float_num:,.2f}"
+#         float_num = abs(float_num)
+#         return f"-${float_num:,.2f}"
+
+#     def update(self, new_amount):
+#         self.amount = new_amount
+    
+#     def __repr__(self):
+#         return str(self.amount)
+    
+#     def __str__(self):
+#         return self.dollarize(self.amount)
+
+# cash = MoneyFmt(12345678.021) 
+# print(cash) 
+# cash.update(100000.4567) 
+# print(cash) 
+# cash.update(-0.3) 
+# print(cash) 
+# print(repr(cash))
+
+
+# from datetime import datetime
+# class Clock:
+#     def current_time(self):
+#         print(datetime.now().strftime("%H:%M:%S"))
+    
+# class Alarm:
+#     def on(self):
+#         print("Будильник включен")
+
+#     def off(self):
+#         print("Будильник выключен")
+
+# class AlarmClock(Clock, Alarm):
+#     def alarm_on(self):
+#         self.on()
+
+# clock = AlarmClock()
+# clock.current_time() 
+# clock.alarm_on()
+
+# from datetime import datetime
+# class Clock:
+#     @staticmethod
+#     def current_time():
+#         print(datetime.now().strftime("%H:%M:%S"))
+    
+# class Alarm:
+#     @staticmethod
+#     def on():
+#         print("Будильник включен")
+
+#     @staticmethod
+#     def off():
+#         print("Будильник выключен")
+
+# class AlarmClock(Clock, Alarm):
+#     def alarm_on(self):
+#         self.on()
+
+# clock = AlarmClock()
+# clock.current_time() 
+# clock.alarm_on()
+
+
+
+
+
+
+# from datetime import datetime 
+
+# class CreateMixin: 
+#     def create(self, todo, key): 
+#         if key in self.todos: 
+#             return 'Задача под таким ключом уже существует' 
+#         self.todos[key] = todo 
+#         return self.todos 
+
+# class DeleteMixin: 
+#     def delete(self, key): 
+#         delete_ = self.todos.pop(key, None) 
+#         if not delete_:
+#             return 'нет такого ключа'
+#         return delete_
+
+# class UpdateMixin: 
+#     def update(self, key, new_value): 
+#         self.todos[key] = new_value 
+#         return self.todos 
+
+# class ReadMixin: 
+#     def read(self): 
+#         return sorted(self.todos.items())
+
+# class ToDo(CreateMixin, DeleteMixin, UpdateMixin, ReadMixin): 
+#     todos = {} 
+
+#     def set_deadline(self, deadline): 
+#         day, month, year = deadline.split("/")
+#         datetime_deadline = datetime(int(year), int(month), int(day))
+#         datetime_now = datetime.now()
+#         return (datetime_deadline - datetime_now).days + 1
+
+# task = ToDo() 
+# print(task.set_deadline('31/12/2022'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -131,7 +131,7 @@ class Cylinder:
     def __init__(self, diameter, height):
         self.di = diameter
         self.hi = height
-        self.area = self.get_area(diameter, height)
+        self.area = Cylinder.get_area(diameter, height)
 
     @staticmethod
     def get_area(di, hi):
