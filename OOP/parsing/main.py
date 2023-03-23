@@ -15,11 +15,13 @@ class BaseParser:
     @staticmethod
     def format_title(title: str) -> str:
         # return title.replace('\r', '').replace('\t', '').replace('\n', ' ')
-        return " ".join(title.replace("\r", "").replace("\t", "").split())
+        # return " ".join(title.replace("\r", "").replace("\t", "").split())
+        return title.strip('\n\t')
 
     @staticmethod
     def format_price(price: str) -> int:
-        return int(re.search('\d+',price).group(0))
+        # return int(re.search('\d+',price).group(0))
+        return price.strip('\n\t')
 
     def search(self, query: str) -> List[dict]:
         'принимаем поисковое слово и возвращает список со всеми результатами'
@@ -86,7 +88,6 @@ class KulikovParser(BaseParser):
 # print(KulikovParser().search('торт'))
 
 # [{'title': 'Торт "Nutella" гранд (1,150 кг)', 'price': 1190}, {'title': 'Торт "Эстерхази" (0,650 кг)', 'price': 990}, {'title': 'Торт "Фисташковый" с малиной (0,650 кг)', 'price': 890}, {'title': 'Торт-сет "Ореховый" (0,540 кг)', 'price': 150}, {'title': 'Торт -сет "Бисквитно-ягодный" (0,570 кг)', 'price': 690}, {'title': 'Торт «Шварцвальд» гранд плюс (1,800 кг)', 'price': 1750}, {'title': 'Торт-сет «Ассорти» (0,750 кг)', 'price': 850}, {'title': 'Торт «Красный бархат» гранд плюс', 'price': 1450}, {'title': 'Торт «Кудрявый пинчер» гранд плюс', 'price': 1850}, {'title': 'Торт "Медовик с орехами" гранд', 'price': 890}, {'title': 'Торт "Медовик с орехами" гранд плюс', 'price': 1350}, {'title': 'Торт "Malina" классик', 'price': 890}]
-
 
 
 
