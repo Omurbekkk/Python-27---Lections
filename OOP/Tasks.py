@@ -510,9 +510,88 @@ print(obj.val)           # 1
 
 
 
+# nums = [2,8,15,4,3]
+# target = 11
+# nn = nums[1:]
+# for i in nums:
+#     for ii in nn:
+#         res = []
+#         if i+ii == target:
+#                 res.append(nums.index(i))
+#                 res.append(nn.index(ii)+1)
+#                 print(res)
+
+    
+# nums = [3,6,3]
+# target =  6
+# nn = nums[1:]
+# for i in nums:
+#     for ii in nn:
+#         res = []
+#         if i+ii == target:
+#                 res.append(nums.index(i))
+#                 res.append(nn.index(ii)+1)
+#                 print(res)
+
+# class Solution:
+#     def twoSum(self, nums, target):
+#         for ind, num1 in enumerate(nums):
+#             num2 = target - num1
+#             if num2 in nums:
+#                 if ind != nums.index(num2):
+#                     return [ind, nums.index(num2)]
 
 
 
+# list1 = []
+# for t in range(1, 25):
+#     res = 4* t**2 + (24-t)**2
+#     list1.append(res)
+# print(min(list1))
+
+# for t in range(1, 24):
+#     res = 4* t**2 + (24-t)**2
+#     if res == 461:
+#         print(t)
+
+# t = 5
+# print(t, 24-t)
+
+
+
+
+# list1 = []
+# list2 = []
+# for t in range(1, 25):
+#     t2 = 24 - t
+#     res = 4* t**2 + t2**2
+#     list1.append(res)
+#     if res == min(list1):
+#         list2.append(t)
+# print(min(list1))
+# print(list2[-1], 24-list2[-1])
+
+# list1 = []
+# list2 = []
+# for t in range(1, 25):
+#     t2 = 24 - t
+#     res = 4* t**2 + t2**2
+#     list1.append(res)
+#     if res == min(list1):
+#         list2.append((t, t2))
+# print(min(list1))
+# print(list2[-1])
+
+# t1 = 0
+# s1 = 1000000
+# for t in range(1, 25):
+#     t2 = 24 - t
+#     s = 4* t**2 + t2**2
+#     if s<s1:
+#         s1 = s
+#         t1 = t
+
+# print(t1, 24-t1, s1)
 
 
 
