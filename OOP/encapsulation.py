@@ -60,59 +60,6 @@
 
 
 
-class A:
-    @property
-    def Hello(self):
-        return 5
-
-    # После @property функция становится аттриб-ом, у которого появ-ся setter, getter, deleter
-
-    # property.setter работает когда мы пишем obj.attr = ...
-    @Hello.setter
-    def Hello(self, new_value):
-        print('setter')
-
-    # property.deleter работает когда мы пишем del obj.attr
-    @Hello.deleter
-    def Hello(self):
-        print('deleter')
-
-obj = A()
-print(obj.Hello)  # 5
-obj.Hello = 'new value' # setter
-del obj.Hello # deleter
-
-
-class Person:
-    def __init__(self, name, age):
-        self.name = name
-        self.__age = age
-    
-    @property
-    def age(self):
-        return self.__age
-    
-    @age.setter
-    def age(self, new_age):
-        if new_age > 0 and new_age < 120:
-            self.__age = new_age
-        else:
-            raise Exception('Invalid age')
-    
-    @age.deleter
-    def age(self):
-        if self.__age < 100:
-            raise Exception('Cannot delete age')
-        del self.__age
-
-obj = Person('Nastya', 12)
-print(obj.age)
-obj.age = 34
-print(obj.age) # 34
-# obj.age = -100 # Exeption: Invalid age
-# del obj.age # Exeption: Cannot delete age
-obj.age = 115
-del obj.age
 
 
 

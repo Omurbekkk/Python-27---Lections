@@ -141,6 +141,8 @@
 #     print(r)
 
 
+
+
 # class Math:
 #     def __init__(self, number):
 #         self.number = number
@@ -593,6 +595,47 @@ print(obj.val)           # 1
 
 # print(t1, 24-t1, s1)
 
+
+
+
+
+# from datetime import datetime, timedelta
+
+# dt_now = datetime.now()
+# print(dt_now.year)                 # 2023
+
+
+# td_object =timedelta(days=0, seconds=0, microseconds=0, milliseconds=0, minutes=0, hours=0, weeks=0)
+# td_object
+# print(timedelta(days=365))
+
+
+
+# import datetime                               #Импорт модуля
+# x = datetime.datetime.now()                   #Вызов метода now из класса datetime
+# print(x.year)                    #2023        #Вывод на экран значения текущего года
+# print(x.strftime("%A"))          # Monday     #Отображение на экране значения текущего дня
+
+
+# class Nobel:
+#     def __init__(self, category, year, winner):
+#         self. category = category
+#         self.year = year
+#         self.winner = winner
+#     def get_year(self):
+#         import datetime
+#         x = datetime.datetime.now()
+#         res = x.year - self.year
+#         return f'выиграл {res} лет назад'
+
+# winner1 = Nobel("Литература", 1971, "Пабло Неруда") 
+# print(winner1.category, winner1.year, winner1.winner) 
+# print(winner1.get_year())
+
+  
+# winner2 = Nobel("Литература", 1994, "Кэндзабуро Оэ") 
+# print(winner2.category, winner2.year, winner2.winner) 
+# print(winner2.get_year())
 
 
 
