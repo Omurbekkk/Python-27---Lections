@@ -249,3 +249,84 @@ JOIN project ON project.id = dev_pro.proj_id;
 ```
 
 
+# Агрегатные функции
+
+> Все агрегатные функции используются с 'group by'
+
+> **SUM** - считает сумму всех записей в сгруппированном поле
+```sql
+SELECT customer.name, SUM(product.price) FROM customer
+JOIN cart ON customer.id = cart.customer_id
+JOIN product ON product.id = cart.product_id
+GROUP BY (customer.id);
+--     name    | sum  
+-- ------------+------
+--  customer 2 |  470
+--  customer 3 |  688
+--  customer 1 | 1079
+```
+
+> **AVG** - считает среднее значение всех записей в сгруппированном поле
+```sql
+SELECT customer.name, AVG(product.price) FROM customer
+JOIN cart ON customer.id = cart.customer_id
+JOIN product ON product.id = cart.product_id
+GROUP BY (customer.id);
+--     name    | round  
+-- ------------+--------
+--  customer 2 | 470.00
+--  customer 3 | 344.00
+--  customer 1 | 359.67
+```
+
+> **ARRAY_AGG** - собирает значения всех записей в сгруппированном поле в массив (список)
+```sql
+select blogger.name, array_agg(post.body) from blogger
+join post on blogger.id = post.blogger_id
+group by (blogger.id);
+--    name    |                         array_agg                         
+-- -----------+-----------------------------------------------------------
+--  blogger 1 | {"my first blog","today is a good day","it is my b-day!"}
+--  blogger 2 | {"my first post","some post"}
+--  blogger 3 | {"i am not a blogger"}
+```
+
+> **MIN/MAX** - выбирает минимальное/максимальное значение из всех записей в сгруппированном поле
+
+```sql
+select blogger.name, min(post.created_at), max(post.created_at) from blogger 
+join post on blogger.id = post.blogger_id
+group by (blogger.id);
+--    name    |    min     |    max     
+-- -----------+------------+------------
+--  blogger 2 | 2013-05-10 | 2022-06-23
+--  blogger 3 | 2022-08-15 | 2022-08-15
+--  blogger 1 | 2020-08-01 | 2021-09-30
+```
+
+> **COUNT** - считает количество записей в сгруппированном поле
+
+```sql
+select blogger.name, count(post.id) from blogger
+join post on blogger.id = post.blogger_id
+group by (blogger.id);
+--    name    | count 
+-- -----------+-------
+--  blogger 2 |     2
+--  blogger 3 |     1
+--  blogger 1 |     3
+```
+
+
+# Import / Export баз данных
+
+write from file to db
+```bash
+psql db_name < file.sql
+# при этом db_name должна существовать
+```
+write from db to file
+```bash
+pg_dump db_name > file.sql
+```
+
