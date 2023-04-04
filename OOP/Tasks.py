@@ -639,7 +639,43 @@ print(obj.val)           # 1
 
 
 
+list_ = ['a', 'n', 'n', 'a']
+print('YES') if list(map(lambda x: x, list_)) == list(map(lambda x: x, list_))[::-1] else print('NO')
 
 
+users = [
+  { 'name': 'Jack', 'age': 35, 'work': 'IT-backend developer' },
+  { 'name': 'Helen', 'age': 35, 'work': 'Nurse' },
+  { 'name': 'Bob', 'age': 35, 'work': 'Driver' },
+  { 'name': 'Jessica', 'age': 35, 'work': 'IT-frontend developer' },
+  { 'name': 'Helga', 'age': 35, 'work': 'IT-HR' }
+]
+
+# def func15(l):
+#     for i in l:
+#         if 'IT' in i['work']:
+#             return f"{i['name']}, скидки в магазине компьютерной техники!"
+
+
+# print(func15(users))
+
+
+def func15(l):
+    for i in l:
+        if 'IT' in i['work']:
+            print(f"{i['name']}, скидки в магазине компьютерной техники!")
+
+
+func15(users)
+
+def func15(users): 
+    r=[]
+    for i in users: 
+        if i['work'].startswith('IT'): 
+            r.append(f"{i['name']}, скидки в магазине компьютерной техники!\n") 
+    h=''.join(i for i in r) 
+    return h
+
+print(func15(users))
 
 
